@@ -19,6 +19,9 @@
     "gulp-rsync": "0.0.8",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1",
-    "gulp-util": "^3.0.8"
+    "del": "^3.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-cache": "^1.0.2"
   }
 }
