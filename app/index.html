@@ -11,12 +11,12 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
+
 	<!-- Template Basic Images Start -->
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
-	
+
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
@@ -27,8 +27,25 @@
 
 <body>
 
-	<video autoplay muted loop id="myVideo" src="video/background.mp4"></video>
+	<nav class="navbar navbar-expand-sm">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="../img/logomodzhi.svg" alt="Logo" style="width:90px;">
+			</a>
+			<ul class="navbar-nav navbar-right">
+				<li><a href="#">о проекте</a></li>
+				<li><a href="#">в жизни</a></li>
+				<li><a href="#">контакты</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="fullscreen-bg">
+		<div class="overlay"></div>
+		<video autoplay muted loop id="myVideo" src="video/background.mp4" class="fullscreen-bg__video"></video>
+	</div>
 
 	<script src="js/scripts.min.js"></script>
 </body>
+
 </html>
