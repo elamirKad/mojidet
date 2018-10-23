@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 
 <head>
 
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<title>mojidet</title>
 	<meta name="description" content="">
@@ -13,22 +12,63 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Template Basic Images Start -->
-	<link rel="icon" href="./img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon-180x180.png">
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
 
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
-	<link rel="stylesheet" href="css/main.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="./libs/fullpage.js/dist/fullpage.css" /> -->
+	<link rel="stylesheet" href="./css/fullpage.min.css">
+	<link rel="stylesheet" href="./css/main.min.css">
 
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
 </head>
 
 <body>
+	<nav class="navbar fixed-top navbar-expand-lg justify-content-between">
+		<a class="navbar-brand" href="#">
+			<img src="./img/logomodzhi.svg" alt="Logo" style="width:90px;">
+		</a>
+		<ul class="navbar-nav navbar-right">
+			<li><a href="#project">о проекте</a></li>
+			<li><a href="#life">в жизни</a></li>
+			<li><a href="#contacts">контакты</a></li>
+		</ul>
 
-	
-	<script src="js/scripts.min.js"></script>
+	</nav>
+	<div id="fullpage">
+		<div class="section" id="section0">
+			<div class="cyanlayer"></div>
+			<video id="myVideo" loop muted data-autoplay autoplay>
+				<source src="./video/background.mp4" type="video/mp4">
+			</video>
+			<div class="layer">
+				<h1 class="moji-text font-weight-bold"><b>Moji</b></h1>
+			</div>
+		</div>
+		<div class="section" id="section1">
+		</div>
+	</div>
+
+	<script src="./js/scripts.min.js"></script>
+	<!-- <script type="text/javascript" src="./libs/fullpage.js/dist/fullpage.js"></script> -->
+	<script src="./js/fullpage.js"></script>
+
+	<script type="text/javascript">
+		var myFullpage = new fullpage('#fullpage', {
+			verticalCentered: true,
+			sectionsColor: ['#fff', '#01b5f2']
+		});
+	</script>
+
 </body>
 
 </html>

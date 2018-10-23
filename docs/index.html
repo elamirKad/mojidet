@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 
 <head>
 
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<title>mojidet</title>
 	<meta name="description" content="">
@@ -13,64 +12,63 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Template Basic Images Start -->
-	<link rel="icon" href="./img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon-180x180.png">
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
 
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
-	<link rel="stylesheet" href="css/main.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="./libs/fullpage.js/dist/fullpage.css" /> -->
+	<link rel="stylesheet" href="./css/fullpage.min.css">
+	<link rel="stylesheet" href="./css/main.min.css">
 
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
 </head>
 
 <body>
+	<nav class="navbar fixed-top navbar-expand-lg justify-content-between">
+		<a class="navbar-brand" href="#">
+			<img src="./img/logomodzhi.svg" alt="Logo" style="width:90px;">
+		</a>
+		<ul class="navbar-nav navbar-right">
+			<li><a href="#project">о проекте</a></li>
+			<li><a href="#life">в жизни</a></li>
+			<li><a href="#contacts">контакты</a></li>
+		</ul>
 
-	<div class="video_block">
-		<nav class="navbar navbar-expand-sm">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">
-					<img src="./img/logomodzhi.svg" alt="Logo" style="width:90px;">
-				</a>
-				<ul class="navbar-nav navbar-right">
-					<li><a href="#">о проекте</a></li>
-					<li><a href="#">в жизни</a></li>
-					<li><a href="#">контакты</a></li>
-				</ul>
+	</nav>
+	<div id="fullpage">
+		<div class="section" id="section0">
+			<div class="cyanlayer"></div>
+			<video id="myVideo" loop muted data-autoplay autoplay>
+				<source src="./video/background.mp4" type="video/mp4">
+			</video>
+			<div class="layer">
+				<h1 class="moji-text font-weight-bold"><b>Moji</b></h1>
 			</div>
-		</nav>
+		</div>
+		<div class="section" id="section1">
+		</div>
+	</div>
 
-		<div class="fullscreen-bg">
-			<video autoplay muted loop id="myVideo" src="video/background1.mp4" class="fullscreen-bg__video"></video>
-		</div>
-	</div>
-	<div class="step">
-		<br><br>
-	</div>
-	<!-- <div class="functions">
-		<br>
-		<h1>ФУНКЦИИ</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo modi aut tempore quis, libero deserunt assumenda natus cumque quia ducimus saepe, eius iure laudantium tenetur repudiandae excepturi asperiores repellat molli. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ex consequuntur ipsa natus necessitatibus magnam nam deserunt, dolores saepe ab! Sit quia sapiente aperiam qui tenetur ex voluptatem exercitationem ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias deserunt omnis ducimus facilis quam, quisquam consequuntur deleniti mollitia aliquam aspernatur! Laudantium facilis voluptatum totam nisi excepturi sed explicabo voluptatem error?lorem</p>
-		<div class="iphone">
-			<img src="img/iphone.png" alt="Doni's Iphone" width="50%" align="right" vspace="10" hspace="10">
-		</div>
-		<br><br>
-	</div>
-	 -->
-	<div class="functions">
-		<table width="100%" cellspacing="0" cellpadding="0">
-	   		<tr> 
-	   			<td>
-	   				<h1>ФУНКЦИИ</h1>
-	   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo modi aut tempore quis, libero deserunt assumenda natus cumque quia ducimus saepe, eius iure laudantium tenetur repudiandae excepturi asperiores repellat molli. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ex consequuntur ipsa natus necessitatibus magnam nam deserunt, dolores saepe ab! Sit quia sapiente aperiam qui tenetur ex voluptatem exercitationem ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias deserunt omnis ducimus facilis quam, quisquam consequuntur deleniti mollitia aliquam aspernatur! Laudantium facilis voluptatum totam nisi excepturi sed explicabo voluptatem error?lorem</p>
-	   			</td>
-	    		<td class="leftcol"><img src="img/iphone.png" 
-	    		width="100%" alt="Doni's Iphones"></td>
-	   		</tr>
-	  	</table>
-  	</div>
-	<script src="js/scripts.min.js"></script>
+	<script src="./js/scripts.min.js"></script>
+	<!-- <script type="text/javascript" src="./libs/fullpage.js/dist/fullpage.js"></script> -->
+	<script src="./js/fullpage.js"></script>
+
+	<script type="text/javascript">
+		var myFullpage = new fullpage('#fullpage', {
+			verticalCentered: true,
+			sectionsColor: ['#fff', '#01b5f2']
+		});
+	</script>
+
 </body>
 
 </html>

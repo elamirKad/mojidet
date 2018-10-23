@@ -50,11 +50,12 @@ gulp.task('styles', function () {
 
 gulp.task('js', function () {
 	return gulp.src([
-			'app/libs/jquery/docs/jquery.min.js',
+			'app/libs/jquery/dist/jquery.min.js',
+			'app/libs/bootstrap/js/bootstrap.bundle.js',
 			'app/js/common.js', // Always at the end
 		])
 		.pipe(concat('scripts.min.js'))
-		.pipe(uglify()) // Mifify js (opt.)
+		.pipe(uglify())
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.reload({
 			stream: true
@@ -107,14 +108,15 @@ gulp.task('clear', function (callback) {
 gulp.task('build', ['clean', 'img', 'styles', 'js'], function () {
 
 	var buildCss = gulp.src([ // Переносим библиотеки в продакшен
-			'app/css/*.css'
+			'app/css/*.css',
+			'app/libs/fullpage.js/dist/fullpage.min.css'
 		])
 		.pipe(gulp.dest('docs/css'))
 
 	var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
 		.pipe(gulp.dest('docs/fonts'))
 
-	var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+	var buildJs = gulp.src(['app/js/**/*','app/libs/fullpage.js/dist/fullpage.js']) // Переносим скрипты в продакшен
 		.pipe(gulp.dest('docs/js'))
 
 	var buildVideos = gulp.src('app/video/*.mp4') // Переносим видео в продакшен

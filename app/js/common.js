@@ -1,7 +1,2 @@
 $(function() {
-
-  // Custom JS
-  
-
-
 });

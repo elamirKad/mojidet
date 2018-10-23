@@ -2,6 +2,77 @@
 @import "fonts"
 @import "libs"
 
+*
+    font-family: $default-font
+    border: 1px solid black
 
+.section
+	text-align: left
+	overflow: hidden
+
+#myVideo
+	position: absolute
+	right: 0
+	bottom: 0
+	top: 0
+	right: 0
+	width: 100%
+	height: 100%
+	background-size: 100% 100%
+	background-color: black 
+	background-position: center center
+	background-size: contain
+	object-fit: cover
+	z-index: 3
+
+.cyanlayer
+    position: absolute
+    z-index: 5
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100%
+    border: 0.8em solid $accent
+
+#section0 .layer
+	position: absolute
+	z-index: 4
+	width: 100%
+	left: 0
+	top: 43%
+	-webkit-transform: translate3d(0,0,0)
+	-ms-transform: translate3d(0,0,0)
+	transform: translate3d(0,0,0)
+
+#section0
+	overflow: hidden
+
+video::-webkit-media-controls 
+     display:none !important
+
+.navbar
+    margin: 1vh
+
+.navbar-brand
+    img
+        margin-left: -2vh
+
+.navbar-nav
+    margin-right: 5vh
+    margin-top: 1vh
+
+.navbar-right
+	li
+		padding: 2.5vh
+		a
+			color: #fff
+
+.moji-text
+    display: block
+    font-size: 7em
+    color: #fff
+    font-style: italic
+    margin-left: 8vh
+    margin-top: -20vh
 
 @import "media" // Always at the end
