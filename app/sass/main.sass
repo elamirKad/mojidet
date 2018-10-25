@@ -33,7 +33,7 @@
     width: 100%
     border: 0.8em solid $accent
 
-#section0 .layer
+#section0 .layer, #section1 .layer
 	position: absolute
 	z-index: 4
 	width: 100%
@@ -43,7 +43,7 @@
 	-ms-transform: translate3d(0,0,0)
 	transform: translate3d(0,0,0)
 
-#section0
+#section0, #section1
 	overflow: hidden
 
 video::-webkit-media-controls 
@@ -73,5 +73,18 @@ video::-webkit-media-controls
     font-style: italic
     margin-left: 8vh
     margin-top: -20vh
+
+.moji-img
+	display: block
+	max-width: 100%
+	height: auto
+	margin-top: -40vh
+	float: right
+
+.moji-para
+	margin-left: 10%
+	color: #fff
+	font-size: 1em
+	float: left
 
 @import "media" // Always at the end
