@@ -1,7 +1,5 @@
 # mojidet
 
-Install
-
 !!! Before use
 1. install nodejs 
   https://nodejs.org/dist/v11.0.0/node-v11.0.0-x64.msi
