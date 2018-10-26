@@ -52,6 +52,7 @@ gulp.task('js', function () {
 	return gulp.src([
 			'app/libs/jquery/dist/jquery.min.js',
 			'app/libs/bootstrap/js/bootstrap.bundle.js',
+			'app/libs/fullpage.js/dist/fullpage.js',
 			'app/js/common.js', // Always at the end
 		])
 		.pipe(concat('scripts.min.js'))
@@ -61,21 +62,6 @@ gulp.task('js', function () {
 			stream: true
 		}))
 });
-
-// gulp.task('rsync', function() {
-// 	return gulp.src('app/**')
-// 	.pipe(rsync({
-// 		root: 'app/',
-// 		hostname: 'username@yousite.com',
-// 		destination: 'yousite/public_html/',
-// 		// include: ['*.htaccess'], // Includes files to deploy
-// 		exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
-// 		recursive: true,
-// 		archive: true,
-// 		silent: false,
-// 		compress: true
-// 	}))
-// });
 
 gulp.task('watch', ['styles', 'js', 'browser-sync'], function () {
 	gulp.watch('app/' + syntax + '/**/*.' + syntax + '', ['styles']);
@@ -107,16 +93,13 @@ gulp.task('clear', function (callback) {
 
 gulp.task('build', ['clean', 'img', 'styles', 'js'], function () {
 
-	var buildCss = gulp.src([ // Переносим библиотеки в продакшен
-			'app/css/*.css',
-			'app/libs/fullpage.js/dist/fullpage.min.css'
-		])
+	var buildCss = gulp.src('app/css/*.css') // Переносим библиотеки в продакшен
 		.pipe(gulp.dest('docs/css'))
 
 	var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
 		.pipe(gulp.dest('docs/fonts'))
 
-	var buildJs = gulp.src(['app/js/**/*','app/libs/fullpage.js/dist/fullpage.js']) // Переносим скрипты в продакшен
+	var buildJs = gulp.src(['app/js/**/*']) // Переносим скрипты в продакшен
 		.pipe(gulp.dest('docs/js'))
 
 	var buildVideos = gulp.src('app/video/*.mp4') // Переносим видео в продакшен
