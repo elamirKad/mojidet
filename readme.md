@@ -86,6 +86,8 @@ $ bower install [package-name]
 - [I0bSTeR](https://github.com/I0bSTeR)
 - [ElamanGOD](https://github.com/ElamanGOD)
 - [Elamir](https://github.com/)
+- [Yerzhan](https://github.com/Yerji)
+- [Daniyar](https://github.com/)
 
 ## License
 
